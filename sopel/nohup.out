@@ -1,0 +1,79 @@
+There's already a Sopel instance running with this config file
+Try using the --quit or the --kill options
+There's already a Sopel instance running with this config file
+Try using the --quit or the --kill options
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+
+
+Registered 36 modules,
+6 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/wikipedia.py", line 130, in wikipedia
+    server = lang + 'wikipedia.org'
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/wikipedia.py", line 130, in wikipedia
+    server = lang + 'wikipedia.org'
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/wikipedia.py", line 130, in wikipedia
+    server = 'wikipedia.org'
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/wikipedia.py", line 130, in wikipedia
+    server = 'wikipedia.org'
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+
+
+Registered 36 modules,
+6 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/wikipedia.py", line 107, in wikipedia
+    lang = en
+NameError: name 'en' is not defined
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Client Quit)

@@ -1,0 +1,11 @@
+*.phm
+src/lib/
+logs/
+*.pyc
+*.log
+.coverage
+htmlcov/
+*.db
+venv/
+*.komodoproject
+sopel/modules/woodcoin-details.json

@@ -1,0 +1,2711 @@
+Error: Do not run Sopel with root privileges.
+Error: Do not run Sopel with root privileges.
+
+Welcome to Sopel. Loading modules...
+
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/__init__.py", line 65, in run
+    p = bot.Sopel(config, daemon=daemon)
+  File "/var/www/py/sopel/bot.py", line 122, in __init__
+    self.setup()
+  File "/var/www/py/sopel/bot.py", line 127, in setup
+    modules = sopel.loader.enumerate_modules(self.config)
+  File "/var/www/py/sopel/loader.py", line 82, in enumerate_modules
+    _update_modules_from_dir(modules, directory)
+  File "/var/www/py/sopel/loader.py", line 32, in _update_modules_from_dir
+    for path in os.listdir(directory):
+OSError: [Errno 2] No such file or directory: '/var/www/py/chanlog'
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+
+
+Registered 43 modules,
+1 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin.py", line 39, in difficulty
+    raw = requests.get('https://www.blockexperts.com/api?coin=log&action=getdifficulty')
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/sessions.py", line 465, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/sessions.py", line 573, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/adapters.py", line 431, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:510: error:14077438:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert internal error
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin.py", line 55, in blockheight
+    raw = requests.get('https://www.blockexperts.com/api?coin=log&action=getheight')
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/sessions.py", line 465, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/sessions.py", line 573, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/requests-2.7.0-py2.7.egg/requests/adapters.py", line 431, in send
+    raise SSLError(e, request=request)
+SSLError: [Errno 1] _ssl.c:510: error:14077438:SSL routines:SSL23_GET_SERVER_HELLO:tlsv1 alert internal error
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+Calling shutdown for 0 modules.
+Closed!
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+Traceback (most recent call last):
+  File "/var/www/py/sopel.py", line 6, in <module>
+    run_script.main()
+  File "/var/www/py/sopel/run_script.py", line 199, in main
+    run(config_module, pid_file_path)
+  File "/var/www/py/sopel/__init__.py", line 48, in run
+    import sopel.bot as bot
+  File "/var/www/py/sopel/bot.py", line 24, in <module>
+    from sopel import irc
+  File "/var/www/py/sopel/irc.py", line 28, in <module>
+    from sopel.logger import get_logger
+  File "/var/www/py/sopel/logger.py", line 24, in <module>
+    class ChannelOutputFormatter(logging.Formatter("%(asctime)s;%(levelname)s;%(message)s","%Y-%m-%d %H:%M:%S")):
+  File "/usr/lib/python3.4/logging/__init__.py", line 475, in __init__
+    if style not in _STYLES:
+TypeError: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "/var/www/py/sopel.py", line 6, in <module>
+    run_script.main()
+  File "/var/www/py/sopel/run_script.py", line 199, in main
+    run(config_module, pid_file_path)
+  File "/var/www/py/sopel/__init__.py", line 48, in run
+    import sopel.bot as bot
+  File "/var/www/py/sopel/bot.py", line 24, in <module>
+    from sopel import irc
+  File "/var/www/py/sopel/irc.py", line 28, in <module>
+    from sopel.logger import get_logger
+  File "/var/www/py/sopel/logger.py", line 24, in <module>
+    class ChannelOutputFormatter(logging.Formatter("%(asctime)s;%(levelname)s;%(message)s","%Y-%m-%d %H:%M:%S")):
+  File "/usr/lib/python3.4/logging/__init__.py", line 475, in __init__
+    if style not in _STYLES:
+TypeError: unhashable type: 'dict'
+Traceback (most recent call last):
+  File "/var/www/py/sopel.py", line 6, in <module>
+    run_script.main()
+  File "/var/www/py/sopel/run_script.py", line 199, in main
+    run(config_module, pid_file_path)
+  File "/var/www/py/sopel/__init__.py", line 48, in run
+    import sopel.bot as bot
+  File "/var/www/py/sopel/bot.py", line 24, in <module>
+    from sopel import irc
+  File "/var/www/py/sopel/irc.py", line 28, in <module>
+    from sopel.logger import get_logger
+  File "/var/www/py/sopel/logger.py", line 24
+    class ChannelOutputFormatter(logging.Formatter(datefmt="%Y-%m-%d %H:%M:%S"):
+                                                                               ^
+SyntaxError: invalid syntax
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Client Quit)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading reddit: No module named 'praw' (modules/reddit.py:17)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/meetbot.py", line 159, in startmeeting
+    if not bot.config.has_section('meetbot'):
+  File "/var/www/py/sopel/config/__init__.py", line 168, in __getattr__
+    % (type(self).__name__, name))
+AttributeError: 'Config' object has no attribute 'has_section'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/meetbot.py", line 159, in startmeeting
+    if not bot.config.has_section('meetbot'):
+  File "/var/www/py/sopel/config/__init__.py", line 168, in __getattr__
+    % (type(self).__name__, name))
+AttributeError: 'Config' object has no attribute 'has_section'
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading wooder: name 'get_logger' is not defined (modules/wooder.py:24)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+
+
+Registered 36 modules,
+6 modules failed to load
+
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+
+
+Registered 30 modules,
+5 modules failed to load
+
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+
+
+Registered 30 modules,
+5 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 139, in getReminders
+    today = time.strftime('%m %d %y', time.localtime('%H:%M'))
+NameError: name 'time' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 139, in getReminders
+    today = time.strftime('%m %d %y', time.localtime('%H:%M'))
+NameError: name 'time' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 139, in getReminders
+    today = time.strftime('%m %d %y', localtime('%H:%M'))
+NameError: name 'time' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 139, in getReminders
+    today = time.strftime('%m %d %y', localtime('%H:%M'))
+NameError: name 'time' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 174, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 140, in getReminders
+    today = time.strftime('%m %d %y', localtime('%H:%M'))
+NameError: name 'localtime' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 174, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 140, in getReminders
+    today = time.strftime('%m %d %y', localtime('%H:%M'))
+NameError: name 'localtime' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 175, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 140, in getReminders
+    hrmin = time.locatime()
+AttributeError: 'module' object has no attribute 'locatime'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 175, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 141, in getReminders
+    today = time.strftime('%m %d %y', hrmin('%H:%M'))
+TypeError: 'time.struct_time' object is not callable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 175, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 140, in getReminders
+    hrmin = time.localtime('%H:%M')
+TypeError: an integer is required (got type str)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 174, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 147, in getReminders
+    lines.append(template % (tellee, datetime, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 174, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 147, in getReminders
+    lines.append(template % (tellee, datetime, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 146, in getReminders
+    lines.append(template % (tellee, datetime, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 175, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 141, in getReminders
+    today = datetime.now()
+UnboundLocalError: local variable 'datetime' referenced before assignment
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 174, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 140, in getReminders
+    today = datetime.datetime.now()
+UnboundLocalError: local variable 'datetime' referenced before assignment
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 173, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 139, in getReminders
+    today = datetime.datetime.now()
+UnboundLocalError: local variable 'datetime' referenced before assignment
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 171, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 144, in getReminders
+    lines.append(template % (tellee, today, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 171, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 144, in getReminders
+    lines.append(template % (tellee, today, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 257, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/tell.py", line 171, in message
+    reminders.extend(getReminders(bot, channel, remkey, tellee))
+  File "/var/www/py/sopel/modules/tell.py", line 144, in getReminders
+    lines.append(template % (tellee, today, teller, lnk, tellee, msg))
+TypeError: not all arguments converted during string formatting
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+Error: Do not run Sopel with root privileges.
+Error: Do not run Sopel with root privileges.
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error in wikipedia setup procedure: name 'WikipediaSection' is not defined (modules/wikipedia.py:24)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 29 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error in wikipedia setup procedure: name 'WikipediaSection' is not defined (modules/wikipedia.py:24)
+Error loading currency: No module named 'lxml' (modules/currency.py:11)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 29 modules,
+7 modules failed to load
+
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+
+
+Registered 34 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Ping timeout reached after 120 seconds, closing connection
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+
+
+Registered 34 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+
+
+Registered 34 modules,
+7 modules failed to load
+
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Got quit signal, shutting down.
+Calling shutdown for 0 modules.
+Closed!
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 34 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 163, in unregister
+    for rule in obj.rule:
+TypeError: 'AuthServiceProxy' object is not iterable
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+Error: Do not run Sopel with root privileges.
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading woodcoin-old: No module named 'urllib.requests' (modules/woodcoin-old.py:19)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 34 modules,
+8 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 19, in <module>
+    import urllib.requests
+ImportError: No module named 'urllib.requests'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 149, in addressbalance
+    address = trigger(2)
+TypeError: 'Trigger' object is not callable
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/asyncore.py", line 411, in __getattr__
+    retattr = getattr(self.socket, attr)
+AttributeError: 'socket' object has no attribute 'replay'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 152, in addressbalance
+    return bot.replay('The balance of ' + address + 'is ' + balPlain)
+  File "/var/www/py/sopel/bot.py", line 207, in __getattr__
+    return getattr(self._bot, attr)
+  File "/usr/lib/python3.4/asyncore.py", line 414, in __getattr__
+    %(self.__class__.__name__, attr))
+AttributeError: Sopel instance has no attribute 'replay'
+
+Ping timeout reached after 120 seconds, closing connection
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Nickname already in use!
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Nickname already in use!
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Nickname already in use!
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Nickname already in use!
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Calling shutdown for 0 modules.
+Welcome to Sopel. Loading modules...
+
+
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+
+
+Registered 35 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 68, in bitcoinPrice
+    return bot.reply('Current price of them bitcoins is ' + output + 'each, mothafuckah.')
+TypeError: Can't convert 'float' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 70, in bitcoinPrice
+    return bot.reply('Current price of them bitcoins is $' + priceBitcoin + ' each,' + nickName + '.')
+TypeError: Can't convert 'list' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 74, in load_module
+    module.setup(bot)
+  File "/var/www/py/sopel/modules/new.py", line 30, in setup
+    bot.config.define_section('url')
+TypeError: define_section() missing 1 required positional argument: 'cls_'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 74, in load_module
+    module.setup(bot)
+  File "/var/www/py/sopel/modules/new.py", line 35, in setup
+    bot.config.define_section('url', UrlSection)
+  File "/var/www/py/sopel/config/__init__.py", line 119, in define_section
+    current_name, new_name)
+ValueError: Can not re-define class for section from <class 'url.UrlSection'> to <class 'new.UrlSection'>.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 74, in load_module
+    module.setup(bot)
+  File "/var/www/py/sopel/modules/new.py", line 35, in setup
+    bot.config.define_section('url', UrlSection2)
+  File "/var/www/py/sopel/config/__init__.py", line 119, in define_section
+    current_name, new_name)
+ValueError: Can not re-define class for section from <class 'url.UrlSection'> to <class 'new.UrlSection2'>.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 68, in log_urls
+    f.write(URL)
+TypeError: must be str, not list
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+TypeError: random_line() takes 1 positional argument but 2 were given
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+TypeError: random_line() takes 1 positional argument but 2 were given
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+TypeError: random_line() takes 1 positional argument but 2 were given
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 77, in random_line
+    return bot.reply(lineURL)
+NameError: name 'bot' is not defined
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 78, in random_line
+    return bot.reply(lineURL)
+AttributeError: 'module' object has no attribute 'reply'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 79, in random_line
+    return bot.reply(lineURL)
+AttributeError: 'module' object has no attribute 'reply'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 81, in random_line
+    return bot.reply(lineURL)
+AttributeError: 'module' object has no attribute 'reply'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 81, in random_line
+    return bot.say(lineURL)
+AttributeError: 'module' object has no attribute 'say'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+TypeError: random_line() missing 1 required positional argument: 'trigger'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 69, in log_urls
+    URL2 = URL.replace('[', '').replace(']', '').replace('\'', '')
+AttributeError: 'list' object has no attribute 'replace'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 69, in log_urls
+    URL2 = URL.replace('[', '').replace(']', '').replace('\'', '')
+AttributeError: 'list' object has no attribute 'replace'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 138, in random_line
+    with open('urls2.txt') as afile:
+FileNotFoundError: [Errno 2] No such file or directory: 'urls2.txt'
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+
+
+Registered 36 modules,
+7 modules failed to load
+
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/new.py", line 136
+    print line
+             ^
+SyntaxError: Missing parentheses in call to 'print'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 131, in log_urls
+    for blankline in fileinput.FileInput(dupe_killer, inplace=1):
+  File "/usr/lib/python3.4/fileinput.py", line 206, in __init__
+    files = tuple(files)
+io.UnsupportedOperation: not readable
+
+Exception ignored in: <bound method FileInput.__del__ of <fileinput.FileInput object at 0x7f5bcc09be48>>
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/fileinput.py", line 238, in __del__
+    self.close()
+  File "/usr/lib/python3.4/fileinput.py", line 241, in close
+    self.nextfile()
+  File "/usr/lib/python3.4/fileinput.py", line 277, in nextfile
+    savestdout = self._savestdout
+AttributeError: 'FileInput' object has no attribute '_savestdout'
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 128, in log_urls
+    dupe_killer = open('urls.txt', 'rw')
+ValueError: must have exactly one of create/read/write/append mode
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 131, in log_urls
+    for blankline in fileinput.FileInput(dupe_killer, inplace=1):
+  File "/usr/lib/python3.4/fileinput.py", line 263, in __next__
+    line = self.readline()
+  File "/usr/lib/python3.4/fileinput.py", line 337, in readline
+    os.rename(self._filename, self._backupfilename)
+FileNotFoundError: [Errno 2] No such file or directory: '\n' -> '\n.bak'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 131, in log_urls
+    for blankline in fileinput.FileInput(dupe_killer, inplace=1):
+  File "/usr/lib/python3.4/fileinput.py", line 263, in __next__
+    line = self.readline()
+  File "/usr/lib/python3.4/fileinput.py", line 337, in readline
+    os.rename(self._filename, self._backupfilename)
+FileNotFoundError: [Errno 2] No such file or directory: '\n' -> '\n.bak'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 143, in random_line
+    for line in file:
+ValueError: I/O operation on closed file.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 143, in random_line
+    if line.strip():
+ValueError: I/O operation on closed file.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 142, in random_line
+    for line in file:
+ValueError: I/O operation on closed file.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+TypeError: random_line() missing 1 required positional argument: 'fileR'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 143, in random_line
+    for line in fileR:
+ValueError: I/O operation on closed file.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 146, in random_line
+    lineURL = next(afile)
+StopIteration
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 140, in random_line
+    lineURL = next(afile)
+StopIteration
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 141, in random_line
+    lineURL = next(afile)
+StopIteration
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/new.py", line 137, in random_line
+    for line in afile:
+ValueError: I/O operation on closed file.
+
+Ping timeout reached after 120 seconds, closing connection
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+
+
+Registered 36 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/usr/lib/python3.4/asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "/usr/lib/python3.4/asyncore.py", line 442, in handle_read_event
+    self.handle_read()
+  File "/usr/lib/python3.4/asynchat.py", line 171, in handle_read
+    self.found_terminator()
+  File "/var/www/py/sopel/irc.py", line 382, in found_terminator
+    self.dispatch(pretrigger)
+  File "/var/www/py/sopel/bot.py", line 301, in dispatch
+    t.start()
+  File "/usr/lib/python3.4/threading.py", line 850, in start
+    _start_new_thread(self._bootstrap, ())
+RuntimeError: can't start new thread
+
+Calling shutdown for 0 modules.
+Closed!
+ERROR:sopel.modules.sopel.irc:Fatal error in core, please review exception log
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+
+
+Registered 37 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 48, in sentFunds
+    drinkCountOld = int(oldDrink)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'list'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 45, in sentFunds
+    count = int(open('count.log', 'w+'))
+TypeError: int() argument must be a string, a bytes-like object or a number, not '_io.TextIOWrapper'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 51, in sentFunds
+    for line in count.readlines():
+ValueError: I/O operation on closed file.
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 49, in sentFunds
+    drinkCountOld = int(oldDrink2)
+ValueError: invalid literal for int() with base 10: '[]'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 49, in sentFunds
+    drinkCountOld = int(oldDrink2)
+ValueError: invalid literal for int() with base 10: '[]'
+
+Got quit signal, shutting down.
+Calling shutdown for 0 modules.
+Closed!
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error in links setup procedure: 'Config' object has no attribute 'url' (config/__init__.py:168)
+
+
+Registered 36 modules,
+8 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 49, in sentFunds
+    drinkCountOld = int(oldDrink2)
+ValueError: invalid literal for int() with base 10: '[]'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1467, in exec_module
+  File "<frozen importlib._bootstrap>", line 1572, in get_code
+  File "<frozen importlib._bootstrap>", line 1532, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/drunk.py", line 40
+    if line not balPlain:
+                       ^
+SyntaxError: invalid syntax
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 43, in sentFunds
+    newbalance.write(balPlain + '0000')
+TypeError: can't concat bytes to str
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 43, in sentFunds
+    newbalance.write(balPlain)
+TypeError: must be str, not bytes
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/drunk.py", line 43, in sentFunds
+    newbalance.write(balPlain)
+TypeError: must be str, not bytes
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 26, in serveDrink
+    return bot.reply('Balance of ' + address + ' is ' + addressBalance + ' at block ' + height2)
+TypeError: Can't convert 'HTTPResponse' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 68, in load_module
+    relevant_parts = sopel.loader.clean_module(module, bot.config)
+  File "/var/www/py/sopel/loader.py", line 209, in clean_module
+    clean_callable(obj, config)
+  File "/var/www/py/sopel/loader.py", line 166, in clean_callable
+    func.rule = [compile_rule(nick, rule) for rule in func.rule]
+  File "/var/www/py/sopel/loader.py", line 166, in <listcomp>
+    func.rule = [compile_rule(nick, rule) for rule in func.rule]
+  File "/var/www/py/sopel/loader.py", line 111, in compile_rule
+    pattern = pattern.replace('$nickname', nick)
+AttributeError: '_sre.SRE_Pattern' object has no attribute 'replace'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in balance setup procedure: '_sre.SRE_Pattern' object has no attribute 'replace' (loader.py:111)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+
+
+Registered 37 modules,
+8 modules failed to load
+
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/woodcoin-old.py", line 161, in addressbalance
+    with urllib.request.urlopen('http://explorer.woodcoin.org/chain/Woodcoin/q/addressbalance/' + address) as bal:
+TypeError: Can't convert 'NoneType' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading bugzilla: No module named 'lxml' (modules/bugzilla.py:9)
+Error in links setup procedure: 'Config' object has no attribute 'url' (config/__init__.py:168)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 37 modules,
+8 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 26, in getBalance
+    return bot.reply('Balance of ' + address + ' is ' + balPlain + ' at block ' + height2)
+TypeError: Can't convert 'int' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 12, in <module>
+    from bs4 import BeautifulSoup
+ImportError: No module named 'bs4'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 12, in <module>
+    from beautifulsoup4 import BeautifulSoup
+ImportError: No module named 'beautifulsoup4'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 12, in <module>
+    import BeautifulSoup
+ImportError: No module named 'BeautifulSoup'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 13, in <module>
+    from urllib import urlopen
+ImportError: cannot import name 'urlopen'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    bot.reply(soup.find('tr', {'class': 'DefaultTable'}).span.text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    bot.reply(soup.find('tr', {'class': 'DefaultTable'}).td.text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 35, in richList
+    bot.reply(soup.find('tr', {'class': 'DefaultTable'}).td.text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 35, in richList
+    bot.reply(soup.find('tr', {'class': 'DefaultTable'}).tr.text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    soup = BeautifulSoup(open(webpage))
+TypeError: invalid file: <http.client.HTTPResponse object at 0x7f336046e128>
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    soup = BeautifulSoup(open(webpage), "lxml")
+TypeError: invalid file: <http.client.HTTPResponse object at 0x7f33581792b0>
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 37, in richList
+    bot.reply(listConts.text)
+AttributeError: 'ResultSet' object has no attribute 'text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 37, in richList
+    bot.reply(listConts.string)
+AttributeError: 'ResultSet' object has no attribute 'string'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 37, in richList
+    bot.reply(listConts.get_text)
+AttributeError: 'ResultSet' object has no attribute 'get_text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputList = listConts.get_text()
+AttributeError: 'ResultSet' object has no attribute 'get_text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputList = soup.get_text(listConts)
+  File "/usr/lib/python3/dist-packages/bs4/element.py", line 838, in get_text
+    return separator.join([s for s in self._all_strings(
+AttributeError: 'ResultSet' object has no attribute 'join'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputList = soup.get_text(listConts)
+  File "/usr/lib/python3/dist-packages/bs4/element.py", line 838, in get_text
+    return separator.join([s for s in self._all_strings(
+AttributeError: 'ResultSet' object has no attribute 'join'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputList = soup.get_text(listConts)
+  File "/usr/lib/python3/dist-packages/bs4/element.py", line 838, in get_text
+    return separator.join([s for s in self._all_strings(
+AttributeError: 'ResultSet' object has no attribute 'join'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputList = listConts.get_text('td')
+AttributeError: 'ResultSet' object has no attribute 'get_text'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 13, in <module>
+    import HTMLParser
+ImportError: No module named 'HTMLParser'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 13, in <module>
+    import HTMLParser
+ImportError: No module named 'HTMLParser'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 13, in <module>
+    import HTMLParser
+  File "/usr/local/lib/python3.4/dist-packages/HTMLParser.py", line 11, in <module>
+    import markupbase
+ImportError: No module named 'markupbase'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 39, in <module>
+    visible_texts = filter(visible, richList.texts)
+AttributeError: 'function' object has no attribute 'texts'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error in links setup procedure: 'Config' object has no attribute 'url' (config/__init__.py:168)
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 38 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Ping timeout reached after 120 seconds, closing connection
+Calling shutdown for 0 modules.
+Closed!
+Calling shutdown for 0 modules.
+Closed!
+Calling shutdown for 0 modules.
+Closed!
+Warning: Disconnected. Reconnecting in 20 seconds...
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+
+
+Registered 39 modules,
+6 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    listRich = requests.get('richlist.json')
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL 'richlist.json': No schema supplied. Perhaps you meant http://richlist.json?
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    listRich = requests.get('richlist.json')
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL 'richlist.json': No schema supplied. Perhaps you meant http://richlist.json?
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    listRich = requests.get('/var/www/py/richlist.json')
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL '/var/www/py/richlist.json': No schema supplied. Perhaps you meant http:///var/www/py/richlist.json?
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    listRich = requests.get('richlist.json')
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 69, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/api.py", line 50, in request
+    response = session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 454, in request
+    prep = self.prepare_request(req)
+  File "/usr/local/lib/python3.4/dist-packages/requests/sessions.py", line 388, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 293, in prepare
+    self.prepare_url(url, params)
+  File "/usr/local/lib/python3.4/dist-packages/requests/models.py", line 353, in prepare_url
+    raise MissingSchema(error)
+requests.exceptions.MissingSchema: Invalid URL 'richlist.json': No schema supplied. Perhaps you meant http://richlist.json?
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRichText)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRichText)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRichText)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRichText)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRichText)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichList = listRichJson["place"][0:9]["address"]["balance"]
+TypeError: 'function' object is not subscriptable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 33, in richList
+    listRichJson = json.loads(listRich)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'Response'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 33, in richList
+    listRichJson = json.loads(listRich)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'Response'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRich2)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRich2)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRich2)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 33, in richList
+    listRich2 = listRich.decode("utf8")
+AttributeError: 'Response' object has no attribute 'decode'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 33, in richList
+    listRich2 = listRich.decode("utf8")
+AttributeError: 'Response' object has no attribute 'decode'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 34, in richList
+    listRichJson = json.loads(listRich2)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 33, in richList
+    listRichJson = json.loads(listRich2)
+  File "/usr/lib/python3.4/json/__init__.py", line 318, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.4/json/decoder.py", line 343, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.4/json/decoder.py", line 361, in raw_decode
+    raise ValueError(errmsg("Expecting value", s, err.value)) from None
+ValueError: Expecting value: line 1 column 1 (char 0)
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    listRichJson = json.loads(listRich)
+  File "/usr/lib/python3.4/json/__init__.py", line 312, in loads
+    s.__class__.__name__))
+TypeError: the JSON object must be str, not 'Response'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 32, in richList
+    f = open(listRich)
+TypeError: invalid file: <Response [404]>
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 31, in richList
+    f = open('http://woodcoin.xyz/richlist.txt')
+FileNotFoundError: [Errno 2] No such file or directory: 'http://woodcoin.xyz/richlist.txt'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    modified = time.ctime(os.path.getmtime(f))
+  File "/usr/lib/python3.4/genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    modified = time.ctime(os.path.getmtime(f))
+  File "/usr/lib/python3.4/genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 35, in richList
+    t = os.path.getmtime(f)
+  File "/usr/lib/python3.4/genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 35, in richList
+    t = os.path.getmtime(f)
+  File "/usr/lib/python3.4/genericpath.py", line 55, in getmtime
+    return os.stat(filename).st_mtime
+TypeError: argument should be string, bytes or integer, not _io.TextIOWrapper
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/balance.py", line 37, in <module>
+    outputTime = modification_date('richlist.txt')
+  File "/var/www/py/sopel/modules/balance.py", line 35, in modification_date
+    return datetime.datetime.fromtimestamp(t)
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 49, in f_reload
+    bot.unregister(obj)
+  File "/var/www/py/sopel/bot.py", line 164, in unregister
+    callb_list = self._callables[obj.priority][rule]
+AttributeError: 'function' object has no attribute 'priority'
+
+Got quit signal, shutting down.
+Calling shutdown for 0 modules.
+Closed!
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+Error in links setup procedure: 'Config' object has no attribute 'url' (config/__init__.py:168)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+
+
+Registered 38 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputTime = modification_date('richlist.txt')
+TypeError: modification_date() missing 1 required positional argument: 'outputTime'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 36, in richList
+    outputTime = modification_date('richlist.txt')
+  File "/var/www/py/sopel/modules/balance.py", line 45, in modification_date
+    return datetime.datetime.fromtimestamp(t)
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/balance.py", line 41, in richList
+    return bot.reply('Accurate as of ' + outputTime + '. For a more updated list, visit http://bit.do/logRichList or http://bit.do/CryptoGuruLogRichList.')
+TypeError: Can't convert 'datetime.datetime' object to str implicitly
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 13, in <module>
+    api = twitter.Api(consumer_key='CaFQsqiGusZvwCtoOpcfPA2bD',
+AttributeError: 'module' object has no attribute 'Api'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 12, in <module>
+    from twitter import api
+ImportError: cannot import name 'api'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)
+
+Welcome to Sopel. Loading modules...
+
+
+Error loading dwarvish: invalid syntax (dwarvish.py, line 3) (../<frozen importlib._bootstrap>:321)
+Error loading twitter: cannot import name 'api' (modules/twitter.py:12)
+Error loading ip: No module named 'pygeoip' (modules/ip.py:9)
+Error loading ipython: No module named 'IPython' (modules/ipython.py:23)
+Error loading weather: No module named 'feedparser' (modules/weather.py:15)
+Error loading rpclogin: invalid syntax (rpclogin.py, line 8) (../<frozen importlib._bootstrap>:321)
+Error in woodcoin setup procedure: 'AuthServiceProxy' object is not iterable (loader.py:161)
+
+
+Registered 39 modules,
+7 modules failed to load
+
+
+Connecting to irc.freenode.net:6667...
+Connected.
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 12, in <module>
+    from twitter import api
+ImportError: cannot import name 'api'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 13, in <module>
+    api = twitter.Api(consumer_key='CaFQsqiGusZvwCtoOpcfPA2bD',
+AttributeError: 'module' object has no attribute 'Api'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 13, in <module>
+    api = twitter.api(consumer_key='CaFQsqiGusZvwCtoOpcfPA2bD',
+AttributeError: 'module' object has no attribute 'api'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 11, in <module>
+    from twitter import Twitter
+ImportError: cannot import name 'Twitter'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 11, in <module>
+    from twitter import Twitter
+ImportError: cannot import name 'Twitter'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 141, in pm_f_load
+    f_load(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 115, in f_load
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 171, in load_source
+    module = methods.load()
+  File "<frozen importlib._bootstrap>", line 1220, in load
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twitter.py", line 15, in <module>
+    api = twitter.Api(consumer_key='CaFQsqiGusZvwCtoOpcfPA2bD',
+AttributeError: 'module' object has no attribute 'Api'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/twattage.py", line 39, in propose_tweet
+    tweetRoll.write(trigger(2))
+TypeError: 'Trigger' object is not callable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/twattage.py", line 39, in propose_tweet
+    tweetRoll.write(trigger(2))
+TypeError: 'Trigger' object is not callable
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twattage.py", line 14, in <module>
+    from sopel.tools.target import Users, Channel
+ImportError: No module named 'sopel.tools.target'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twattage.py", line 14, in <module>
+    from sopel.tools import Users, Channel
+ImportError: cannot import name 'Users'
+
+Traceback (most recent call last):
+  File "/var/www/py/sopel/bot.py", line 254, in call
+    exit_code = func(sopel, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 125, in pm_f_reload
+    f_reload(bot, trigger)
+  File "/var/www/py/sopel/modules/reload.py", line 63, in f_reload
+    load_module(bot, name, path, type_)
+  File "/var/www/py/sopel/modules/reload.py", line 67, in load_module
+    module, mtime = sopel.loader.load_module(name, path, type_)
+  File "/var/www/py/sopel/loader.py", line 187, in load_module
+    module = imp.load_module(name, mod, path, ('.py', 'U', type_))
+  File "/usr/lib/python3.4/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.4/imp.py", line 169, in load_source
+    module = methods.exec(sys.modules[name])
+  File "<frozen importlib._bootstrap>", line 1153, in exec
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1471, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/var/www/py/sopel/modules/twattage.py", line 14, in <module>
+    from sopel.tools import target
+ImportError: cannot import name 'target'
+
+Got quit signal, shutting down.
+ERROR:sopel.modules.sopel.irc:ERROR recieved from server: Closing Link: 104.131.102.63 (Quit: Closing)

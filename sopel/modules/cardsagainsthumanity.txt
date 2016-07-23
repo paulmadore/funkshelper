@@ -1,0 +1,942 @@
+w : being on fire. : 1
+b : 
+w : racism. : 2
+b : 
+w : old-people smell. : 3
+b : 
+w : a micropenis. : 4
+b :
+w : women in yogurt commercials. : 5
+b :
+w : classist undertones. : 6
+b :
+w : not giving a shit about the third world. : 7
+b : 
+w : inserting a mason jar into my anus. : 8 
+b : 
+w : court-ordered rehab. : 9
+b :
+w : a windmill full of corpes. : 10 
+b :
+w : the gays. : 11
+b :
+w : an oversized lollipop. : 12
+b :
+w : African children. : 13
+b :
+w : an asymmetric boob job. : 14
+b :
+w : binging and purging. : 15
+b :
+w : the hardworking Mexican. : 16
+b :
+w : an Oedipus complex. : 17
+b :
+w : a tiny horse. : 18
+b :
+w : boogers. : 19
+b :
+w : penis envy. : 20
+b :
+w : Barack Obama. : 21
+b :
+w : my humps. : 22
+b :
+w : the Tempur Pedic sleep system. : 23
+b :
+w : Scientology. : 24
+b :
+w : dry heaving. : 25
+b :
+w : Skeletor. : 26
+b :
+w : Darth Vader. : 27 
+b :
+w : figgy pudding. : 28
+b :
+w : advice from a wise, old black man. : 29
+b :
+w : five-dollar footlongs. : 30
+b :
+w : elderly Japanese men. : 31
+b :
+w : advice from old Asian ladies. : 32
+b :
+w : free samples. : 33
+b :
+w : estrogen. : 34
+b :
+w : sexual tension. : 35
+b :
+w : famine. : 36
+b :
+w : a stray pube. : 37
+b :
+w : men. : 38
+b :
+w : big men. : 39
+b :
+w : dwarves. : 40
+b :
+w : heartwarming orphans. : 41
+b :
+w : chunks of dead hitchhiker. : 42
+b :
+w : a bag of magic beans. : 43
+b :
+w : repression. : 44
+b :
+w : prancing. : 45
+b :
+w : my relationship status. : 46
+b :
+w : overcompensation. : 47
+b :
+w : peeing a little bit. : 48
+b :
+w : being overexcited. : 49
+b :
+w : underwhelming, anonymous sex. : 50
+b :
+w : prison sex. : 51
+b :
+w : pooping back and forth, forever. : 52
+b :
+w : a ball earwax, seamen, and toenail clippings. : 53
+b :
+w : testicular torsion. : 54
+b :
+w : the Devil himself. : 55
+b :
+w : the World of Warcraft. : 56
+b :
+w : Dick Cheney. : 57
+b :
+w : Bernie Madoff. : 58
+b :
+w : being fabulous. : 59
+b :
+w : pictures of boobs. : 60
+b :
+w : a gentle caress of the inner thigh. : 61
+b :
+w : the Amish. : 62
+b :
+w : the rhythms of Africa. : 63
+b :
+w : Lance Armstrong's missing testicle. : 64
+b :
+w : pedophiles. : 65
+b :
+w : the Pope. : 66
+b :
+w : flying sex snakes. : 67
+b :
+w : Sarah Palin. : 68
+b :
+w : feeding Rosie O'Donnell. : 69
+b :
+w : sex pillow fights. : 70
+b :
+w : invading Poland. : 71
+b :
+w : cybernetic enhancements. : 72
+b :
+w : civilian casualties. : 73
+b :
+w : jobs. : 74
+b :
+w : the female orgasm. : 75
+b :
+w : bitches. : 76
+b :
+w : the Boy Scouts of America. : 77
+b :
+w : Auschwitz. : 78
+b :
+w : finger painting. : 79
+b :
+w : the Care Bear stare. : 80
+b :
+w : the Jews. : 81
+b : 
+w : rich, white booty. : 82
+b :
+w : being marginalized. : 83
+b :
+w : the blood of Christ. : 84
+b :
+w : dead parents. : 85
+b :
+w : the art of seduction. : 86
+b :
+w : dying of dysentary. : 87
+b :
+w : Mr Clean, right behind you. : 88
+b :
+w : magnets. : 89
+b :
+w : Jewish fraternities. : 90
+b :
+w : Hot Pockets. : 91
+b :
+w : Natlie Portman. : 92
+b :
+w : Britney Spears. : 93
+b :
+w : agriculture : 94
+b :
+w : Judge Judy : 95
+b :
+w : surprise sex! : 96
+b :
+w : the gay agenda. : 97
+b :
+w : Robert Downey, Jr. : 98
+b :
+w : the Trail of Tears. : 99
+b :
+w : an M. Night Shamalan plot twist. : 100
+b :
+w : funky fresh rhymes. : 101
+b :
+w : the light of a billion suns. : 102
+b :
+w : amputees. : 103
+b :
+w : throwing a virgin into a volcano. : 104
+b :
+w : Italians. : 105
+b :
+w : explosions. : 106
+b :
+w : a good sniff. : 107
+b :
+w : destroying the evidence. : 108
+b :
+w : children on leashes. : 109
+b :
+w : catapults. : 110
+b :
+w : one trillion dollars. : 111
+b :
+w : friends with benefits. : 112
+b :
+w : dying. : 113
+b :
+w : silence. : 114
+b :
+w : growing a pair. : 115
+b :
+w : YOU MUST CONSTRUCT ADDITIONAL PYLONS. : 116
+b :
+w : Just Bieber. : 117
+b :
+w : The Holy Bible. : 118
+b :
+w : balls. : 119
+b :
+w : praying the gay away. : 120
+b :
+w : teenage pregnancy. : 121
+b :
+w : German dungeon porn. : 122
+b :
+w : the invisible hand. : 123
+b : 
+w : my inner demons. : 124
+b :
+w : powerful thighs. : 125
+b :
+w : getting naked and watching Nickelodeon. : 126
+b :
+w : crippling debt. : 127
+b :
+w : kamikaze pilots. : 128
+b :
+w : teaching a robot to love. : 129
+b :
+w : police brutality. : 130
+b :
+w : horse meat. : 131
+b :
+w : all-you-can-eat, expired shrimp. : 132
+b :
+w : heteronormativity. : 133
+b :
+w : Michael Jackson. : 134
+b :
+w : a relly cool hat. : 135
+b :
+w : copping a feel. : 136
+b :
+w : crystal meth. : 137
+b :
+w : shapeshifters. : 138
+b :
+w : fingering. : 139
+b :
+w : to fingerbang or not to fingerbang. : 140
+b :
+w : a disappointing birthday party. : 141
+b :
+w : the patriarchy. : 142
+b :
+w : my soul. : 143
+b :
+w : a sausage festival. : 144
+b :
+w : the chronic. : 145
+b :
+w : eugenics. : 146
+b :
+w : synergistic management solutions. : 147
+b :
+w : RoboCop. : 148
+b :
+w : serfdom. : 149
+b :
+w : Stephen Hawking talking dirty. : 150
+b :
+w : a man on the brink of orgasm. : 151
+b :
+w : fiery poops. : 152
+b :
+w : public ridicule. : 153
+b :
+w : white-man scalps. : 154
+b :
+w : the morbidly obese. : 155
+b :
+w : object permanence. : 156
+b :
+w : GoGurt. : 157
+b : 
+w : lockjaw. : 158
+b : 
+w : Joe Biden. : 159
+b :
+w : bio-engineered assault turtles with acid breath. : 160
+b :
+w : wet dreams. : 161
+b :
+w : hip hop jewels. : 162
+b :
+w : firing a rifle into the air while balls deep in a squealing hog. : 163
+b :
+w : panda sex. : 164
+b :
+w : in the jungle. : 165
+b :
+w : necrophilia. : 166
+b :
+w : grave robbing. : 167
+b :
+w : a bleached asshole. : 168
+b :
+w : with red hair. : 169
+b :
+w : multiple stab wounds. : 170
+b :
+w : Daniel Radcliff's delicious asshole. : 171
+b :
+w : a monkey smoking a cigar. : 172
+b :
+w : smegma. : 173
+b :
+w : a live studio audience. : 174
+b :
+w : making a pouty face. : 175
+b :
+w : the violation of our most basic human rights. : 176
+b :
+w : unfathomable stupidity. : 177
+b :
+w : sunshine and rainbows. : 178
+b :
+w : the short bus mafia. : 179
+b :
+w : whipping it out. : 180
+b :
+w : the token minority. : 181
+b :
+w : the terrorists. : 182
+b :
+w : the three-fifths compromise. : 183
+b :
+w : a snapping turtle biting the tip of your penis. : 184
+b :
+w : vehicular manslaughter. : 185
+b :
+w : the great depression. : 186
+b :
+w : emotions. : 187
+b :
+w : getting so angry that you pop a boner. : 188
+b :
+w : sam-sex ice dancing. : 189
+b :
+w : an M16 assault rifle. : 190
+b :
+w : man meat. : 191
+b :
+w : incest. : 192
+b :
+w : a foul mouth. : 193
+b :
+w : flightless birds. : 194
+b :
+w : doing the right thing. : 195
+b :
+w : when you fart and a little bit comes out. : 196
+b :
+w : frolicking. : 197
+b : 
+w : being a dick to children. : 198
+b :
+w : poopy diapers. : 199
+b :
+w : seeing grandma naked.  : 200
+b :
+w : raptor attacks. : 201
+b :
+w : swooping. : 202
+b :
+w : concealing a boner. : 203
+b :
+w : full frontal nudity. : 204
+b :
+w : vigrous jazz hands. : 205
+b :
+w : nipple blades. : 206
+b :
+w : a bitch slap. : 207
+b : 
+w : Michelle Obama's arms. : 208
+b :
+w : mouth herpes. : 209
+b :
+w : a robust mongoloid. : 210
+b :
+w : mutually-assured destruction. : 211
+b :
+w : the rapture. : 212
+b :
+w : road head. : 213
+b :
+w : Stalin. : 214
+b :
+w : lactation. : 215
+b :
+w : Hurricane Katrina. : 216
+b :
+w : the true meaning of Christmas. : 217
+b :
+w : self-loathing. : 218
+b :
+w : a brain tumor. : 219
+b :
+w : dead babies. : 220
+b :
+w : New Age musice. : 221
+b :
+w : a thermonuclear detonation. : 222
+b :
+w : geese. : 223
+b :
+w : Kanye West. : 224
+b :
+w : God. : 225
+b :
+w : a spastic nerd. : 226
+b :
+w : Harry Potter erotica. : 227 
+b :
+w : kids with ass cancer. : 228
+b :
+w : lumberjack fantasies. : 229
+b :
+w : the American dream. : 230
+b :
+w : puberty. : 231
+b :
+w : sweet, sweet vengeance. : 232
+b :
+w : winking at old people. : 233
+b :
+w : Oompa-Loompas. : 234
+b : 
+w : the wonders of the Orient. : 235
+b :
+w : authentic Mexican cuisine. : 236
+b : 
+w : pre-teens. : 237
+b :
+w : the little engine that could. : 238
+b :
+w : a fleshlight. : 239
+b :
+w : erectile dysfunction. : 240
+b :
+w : having anuses for eyes. : 241
+b :
+w : Rush Limbaugh's soft, shitty body. : 242
+b :
+w : saxophone solos. : 243
+b :
+w : land mines. : 244
+b :
+w : running out of semen. : 245
+b :
+w : me time. : 246
+b :
+w : Nickelback. : 247
+b :
+w : vigilante justice. : 248
+b :
+w : the south. : 249
+b :
+w : opposable thumbs. : 250
+b :
+w : ghosts. : 251
+b :
+w : alcoholism. : 252
+b :
+w : poorly-timed holocaust jokes. : 253
+b :
+w : inappropriate yodeling. : 254
+b :
+w : battlefield amputations. : 255
+b :
+w : exactly what you'd expect. : 256
+b :
+w : a time travel paradox. : 257
+b :
+w : AXE body spray. : 258
+b :
+w : the pirate's life. : 259
+b :
+w : saying "I love you." : 260
+b :
+w : a sassy black woman. : 261
+b :
+w : being a motherfucking sorcerer. : 262
+b :
+w : a mopey zoo lion. : 263
+b :
+w : a murder most foul. : 264
+b :
+w : a falcon with a cap on its head. : 265
+b :
+w : farting and walking away. : 266
+b :
+w : a mating display. : 267
+b :
+w : the Chinese gymnastics team. : 268
+b :
+w : friction. : 269
+b :
+w : Asians who aren't good at math. : 270
+b :
+w : fear itself. : 271
+b :
+w : a can of whoop-ass. : 272
+b :
+w : yeast. : 273
+b :
+w : Lunchables. : 274
+b :
+w : licking things to claim them as your own. : 275
+b :
+w : vikings. : 276
+b :
+w : the Kool-Aid man. : 277
+b :
+w : hot cheese. : 278
+b :
+w : Nicolas Cage. : 279
+b :
+w : Leonardo DiCaprio. : 280
+b :
+w : a defective condom. : 281
+b :
+w : the invetible heat death of the universe. : 282
+b :
+w : Republicans. : 283
+b :
+w : William Shatner. : 284
+b :
+w : tentacle porn. : 285
+b :
+w : sperm whales. : 286
+b :
+w : Lady Gaga. : 287
+b : 
+w : the wrath of Vladimir Putin. : 288
+b :
+w : gloryholes. : 289
+b :
+w : daddy issues. : 290
+b :
+w : a mime having a stroke. : 291
+b :
+w : white people. : 292
+b :
+w : a lifetime of sadness. : 293
+b :
+w : tasteful sideboob. : 294
+b :
+w : a sea of troubles. : 295
+b :
+w : Nazis. : 296
+b :
+w : a cooler full of organs. : 297
+b :
+w : giving 110%. : 298
+b :
+w : doing it in the butt. : 299
+b :
+w : John Wilkes Booth. : 300
+b :
+w : Holding down a child and farting all over him. : 301
+b :
+w : a homoerotic volleyball montage. : 302
+b :
+w : puppies. : 303
+b :
+w : natural male enhancement. : 304
+b :
+w : brown people. : 305
+b :
+w : dropping a chandelier on your enemies and riding the rope up. : 306
+b :
+w : soup that is too hot. : 307
+b :
+w : sex with Patrick Stewart. : 308
+b :
+w : hormone injections. : 309
+b :
+w : pulling out. : 310
+b :
+w : the Big Bang. : 311
+b :
+w : switching to Geico. : 312
+b :
+w : giving birth to the Antichrist. : 313
+b :
+w : dark and mysterious forces beyond our control. : 314
+b :
+w : Christopher Walken. : 315
+b :
+w : Count Chocula. : 316
+b :
+w : the Hamburglar. : 317
+b :
+w : not reciprocating oral sex. : 318
+b :
+w : Aaron Burr. : 319
+b :
+w : hot people. : 320
+b :
+w : foreskin. : 321
+b :
+w : assless chaps. : 322
+b :
+w : the miracle of childbirth. : 323
+b :
+w : waiting until marriage. : 324
+b :
+w : two midgets shitting into a bucket. : 325
+b :
+w : a sad handjob. : 326
+b :
+w : cheating in the Special Olympics. : 327
+b :
+w : the glass ceiling. : 328
+b :
+w : the hustle. : 329
+b :
+w : the struggle. : 330
+b :
+w : Miley Cyrus at 55. : 331
+b :
+w : our first Chimpanzee. : 332
+b :
+w : breaking out into song and dance. : 333
+b :
+w : a Super Soaker full of cat pee. : 334
+b :
+w : the underground railroad. : 335
+b :
+w : home video of Oprah sobbing into a Lean Cuisine. : 336
+b :
+w : extremely tight pants. : 337
+b :
+w : third base. : 338
+b :
+w : waking up half-naked in a Denny's parking lot. : 339
+b :
+w : the cool, refreshing taste of Pepsi. : 340
+b :
+w : white privilege. : 341
+b :
+w : hope. : 342
+b :
+w : taking off your shirt. : 343
+b :
+w : smallpox blankets. : 344
+b :
+w : raging black privilege. : 345
+b :
+w : ethnic cleansing. : 346
+b :
+w : queefing. : 347
+b :
+w : helplessly giggling at the mention of Hutus and Tutsis. : 348
+b : 
+w : getting really high. : 348
+b :
+w : natural selection. : 349
+b :
+w : a gassy antelope. : 350
+b : 
+w : my sex life. : 351
+b :
+w : Arnold Schwarzenegger. : 352
+b :
+w : pretending to care. : 353
+b :
+w : Ronald Reagan. : 354
+b :
+w : Toni Morrison's vagina. : 355
+b :
+w : an ugly face. : 356
+b :
+w : my black ass. : 357
+b :
+w : BATMAN. : 358
+b :
+w : homeless people. : 359
+b :
+w : racially-biased SAT questions. : 360
+b :
+w : centaurs. : 361
+b :
+w : a salty surprise. : 362
+b :
+w : 72 virgins. : 363
+b : 
+w : embryonic stem cells. : 364
+b :
+w : piexlated bukkake. : 365
+b :
+w : seppuku. : 366
+b :
+w : an icepick lobotomy. : 367
+b :
+w : genuine human connection. : 368
+b :
+w : menstrual rage. : 369
+b :
+w : sexual peeing. : 370
+b :
+w : an endless stream of diarrhea. : 371
+b :
+w : Shaquille O'Neal's acting career. : 372
+b :
+w : horrifying laser hair removal accidents. : 373
+b :
+w : autocannibalism. : 374
+b :
+w : a fetus. : 375
+b :
+w : riding off into the sunset. : 376
+b :
+w : goblins. : 377
+b :
+w : eating the last known bison. : 378
+b :
+w : shiny objects. : 379
+b :
+w : being rich. : 380
+b :
+w : a Bop It. : 381
+b :
+w : leprosy. : 382
+b :
+w : world peace. : 383 
+b :
+w : dick fingers. : 384
+b :
+w : chainsaws for hands. : 385
+b :
+w : the Make-a-Wish foundation. : 386
+b :
+w : penis breath. : 387
+b :
+w : laying an egg. : 388
+b :
+w : the folly of man. : 389 
+b :
+w : my genitals. : 390
+b :
+w : grandma. : 391
+b :
+w : flesh-eating bacteria. : 392
+b :
+w : poor people. : 393
+b :
+w : 50,000 volts straight to the nipples. : 394
+b :
+w : active listening. : 395
+b :
+w : the Ubermensch. : 396
+b :
+w : poor life choices. :  
+b :
+w : altar boys. :  
+b :
+w : my vagina. :  
+b :
+w : Pac-Man uncontrollably guzzling cum. :  
+b :
+w : sniffing glue. : 
+b :
+w : the placenta. :  
+b :
+w : the profoundly handicapped. :  
+b :
+w : spontaneous human combustion. :  
+b :
+w : the KKK. :  
+b :
+w : the clitoris. :  
+b :
+w : not wearing pants. :  
+b :
+w : consensual sex. :  
+b :
+w : black people. :  
+b :
+w : a bucket of fish heads. :  
+b :
+w : hospice care. :  
+b :
+w : passive-aggressive Post-It notes. :  
+b :
+w : Fancy Feast. : 
+b :
+w : the heart of a child. :  
+b : 
+w : crumbs all over the god damn carpet. : 
+b :
+w : your weird brother. :   
+b :
+w : being fat and stupid. :  
+b :
+w : getting married, having a few kids, buying some stuff, retiring Florida and dying. :  
+b :
+w : Sean Penn. :  
+b :
+w : Sean Connery. :  
+b :
+w : expecting a burp and vomiting on the floor. :  
+b :
+w : wifely duties. :  
+b :
+w : a pyramid of severed heads. : 
+b :
+w : Genghis Khan. :  
+b :
+w : historically black colleges. :  
+b :
+w : a subscription to Men's Fitness. :  
+b :
+w : the milk man. :  
+b :
+w : friendly fire. :  
+b :
+w : women's suffrage. :  
+b :
+w : AIDS. : 
+b :
+w : former president George W. :  Bush. :  
+b :
+w : 8 ounces of sweet Mexican black tar heroin. :  
+b :
+w : half-assed foreplay. :  
+b :
+w : edible underpants. :  
+b :
+w : my collection of high-tech sex toys. :  
+b :
+w : the Force. :  
+b :
+w : bees? 
+b :
+w : some god-damn peace and quiet. :  
+b :
+w : jerking off into a pool of children's tears. :  
+b :
+w : a micropig wearing a tiny raincoat and booties. :  
+b :
+w : three dicks at the same time. :  
+b :
+w : masturbation. :  
+b :
+w : Tom Cruise. :  
+b :
+w : a balanced breakfast. : 
+b :
+w : anal beads. :  
+b :
+w : drinking alone. :  
+b :
+w : Cards Against Humanity. :  
+b :
+w : coat hanger abortions. :  
+b :
+w :  used panties. :  
+b :
+w : cuddling. :  
+b :
+w : wiping her butt. :  
+b :
+w : Domino's Oreo Dessert Pizza. :  
+b :
+w : a zesty breakfast burrito. :  
+b :
+w : Morgan Freeman's voice. :  
+b :
+w : a middle-aged man on roller skates. :  
+b :
+w : Gandhi. :  
+b :
+w : the penny whistle solo from "My Heart Will Go On." :
+b :
+w : spectacular abs. :  
+b :
+w : Keanu Reeves. :  
+b :
+w : child beauty pageants. :  
+b :
+w : child abuse. :  
+b :
+w : Billy Nye the Science Guy. :  
+b :
+w : science. :  
+b :
+w : a tribe of warrior women. :  
+b :
+w : Viagra. :  
+b :
+w : her Majesty, Queen Elizabeth II. :  
+b :
+w : the entire Mormon tabernacle choir. :  
+b :
+w : this year's mass shooting. :  
+b :
+w : take-backsies. :  
+b :
+w : an erection that lasts longer than four hours. :  
+b: 
