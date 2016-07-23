@@ -36,6 +36,7 @@ api = twitter.Api(consumer_key='',
 @commands('twitter')
 @rule('$nickname twitter')
 def twitter_info(bot, trigger):
+    """Provides information about the twitter feed as well as the latest tweet."""
     with open('/var/www/py/tweets.txt', 'w') as pretwits:
         pretwits.close()
     user = 'realWoodcoin'
@@ -50,24 +51,28 @@ def twitter_info(bot, trigger):
     bot.say('        ' + twitsy)
     bot.say('Say .tweetpropose to propose our next tweet and allow other members of the room to vote on it.')
 
-@interval(3600)
-def call_tweet_vote(bot, trigger):
-    bot.say('The following tweets are currently being considered for inclusion in our Twitter timeline. Each Tweet must have a majority of the room\'s approval before being posted.')
-    tweetpath = '/var/www/py/tweets/'
-    text = glob.glob(os.path.join(tweetpath, '*.txt'))
-    for file in text:
-        with open(file) as f:
-            rawTweetCnts = [line.rstrip('\n') for line in f]
-            for line in rawTweetCnts[:2]:
-                tweetCnts = line
-        tmp_filename = file.replace("/var/www/py/tweets/", "")
-        filenameish = tmp_filename.replace(".txt", "")
-        bot.say(filenameish + ' : ' + tweetCnts)
-    bot.say('To vote for a tweet, say .voteTweet <tweet#>. To vote against it, do nothing.')
+@interval(2700)
+def call_tweet_vote(bot):
+    """Lists proposed tweets every 45 minutes."""
+    if "#woodcoin" in bot.channels:
+        bot.msg('#woodcoin', 'The following tweets are currently being considered for inclusion in our Twitter timeline. Each Tweet must have a majority of the room\'s approval before being posted.')
+        tweetpath = '/var/www/py/tweets/'
+        text = glob.glob(os.path.join(tweetpath, '*.txt'))
+        for file in text:
+            with open(file) as f:
+                rawTweetCnts = [line.rstrip('\n') for line in f]
+                for line in rawTweetCnts[:2]:
+                    tweetCnts = line
+            tmp_filename = file.replace("/var/www/py/tweets/", "")
+            filenameish = tmp_filename.replace(".txt", "")
+            bot.msg('#woodcoin', filenameish + ' : ' + tweetCnts)
+        bot.msg('#woodcoin', 'To vote for a tweet, say .voteTweet <tweet#>. To vote against it, do nothing.')
 
+        
 @require_privilege(OP, 'You are not a channel operator.')
 @commands('call_tweet_vote')
 def call_tweet_vote_manual(bot, trigger):
+    """Manually lists proposed tweets. Only available to a channel operator."""
     bot.say('The following tweets are currently being considered for inclusion in our Twitter timeline. Each Tweet must have a majority of the room\'s approval before being posted.')
     tweetpath = '/var/www/py/tweets/'
     text = glob.glob(os.path.join(tweetpath, '*.txt'))
@@ -85,6 +90,7 @@ def call_tweet_vote_manual(bot, trigger):
 @rule('$nickname post_tweet')
 @require_privilege(OP, 'You are not a channel operator.')
 def write_tweet_ops(bot, trigger):
+    """Allows a channel operator to post a tweet manually."""
     if len(trigger.group(2)) > 140:
         bot.reply('Your tweet is too fucking long! 140 characters or less!')
     else:
@@ -94,6 +100,7 @@ def write_tweet_ops(bot, trigger):
 @commands('toptweet')
 @rule('$nickname toptweet')
 def latest_tweet_display(bot, trigger):
+    """Displays latest tweet."""
     with open('/var/www/py/tweets.txt', 'w') as pretwits:
         pretwits.close()
     user = 'realWoodcoin'
@@ -108,6 +115,7 @@ def latest_tweet_display(bot, trigger):
 @commands('tweetpropose', 'proposetweet')
 @rule('$nickname twitter')
 def propose_tweet(bot, trigger):
+    """Stores a proposed tweet and associated files in /var/www/py/tweets."""
     if not trigger.group(2):
         return bot.reply('To use this properly you gotta say ".tweetpropose <tweet>"')
     if len(trigger.group(2)) > 140:
@@ -149,11 +157,12 @@ def propose_tweet(bot, trigger):
     initWriteTweetLog.close()
     writeTweetLog = open(tweetLog, 'r+')
     writeTweetLog.write('Tweet proposed by ' + userName)
-    bot.reply('Your tweet has been logged. Every hour I will ask for a vote from the room.')
+    bot.reply('Your tweet has been logged. Every 45 minutes I will ask for a vote from the room.')
 
-@commands('votetweet')
+@commands('votetweet', 'tweetvote')
 @rule('$nickname votetweet')
 def vote_on_tweet(bot, trigger):
+    """Allows users to vote on a selected tweet."""
     if not trigger.group(2):
         bot.reply('Vote for WHICH tweet?')
     tweetNumber = trigger.group(2)
