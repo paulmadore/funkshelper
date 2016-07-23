@@ -1,15 +1,19 @@
 # coding=utf-8
+#pylint: disable-msg=C0103
+"""
+Twitter module for Funkshelper/Sopel -- allows users to vote on tweets and ops
+to post them.
 
-# .twitter - displays twitter handle and last tweet sent, plus information on following commands
-# .tweetpropose - allows any room member to propse the next tweet
-# .tweetVote - member may call a vote on the tweet they have logged in .tweetpropose
-# .tweetpost - if member gets majority of room to approve, tweet can be posted
+Licensed under Mozilla Public License Version 2.
+
+"""
+
 import re
 import readline
 import datetime
 import os
 from os import path
-from os.path import isfile
+from os.path import isfile, exists
 import shutil
 import glob
 import string
@@ -77,11 +81,6 @@ def call_tweet_vote_manual(bot, trigger):
         bot.say(filenameish + ' : ' + tweetCnts)
     bot.say('To vote for a tweet, say .voteTweet <#>. To vote against it, do nothing.')
 
-@commands('testThing')
-@rule('$nickname testThing')
-def testThing(bot, trigger):
-    pass
-
 @commands('post_tweet')
 @rule('$nickname post_tweet')
 @require_privilege(OP, 'You are not a channel operator.')
@@ -117,11 +116,11 @@ def propose_tweet(bot, trigger):
     userList = bot.users
     userListPreOut = len(userList)
     userListOut = int(userListPreOut) - 2
-    
+    userName = trigger.nick
     tweet_file = "/var/www/py/tweets/tweet%s.txt"
     tweetPop = "/var/www/py/tweets/tweet%s.pop"
     tweetVoteCount = "/var/www/py/tweets/tweet%s.cnt"
-       
+    tweetLog = "/var/www/py/tweets/tweet%s.log"
     while isfile(tweetVoteCount % sequence):
         sequence = int(sequence or "1") + 1
     tweetVoteCount = tweetVoteCount % sequence
@@ -129,7 +128,6 @@ def propose_tweet(bot, trigger):
     initWriteTweetVoteCount.close()
     writeTweetVoteCount = open(tweetVoteCount, 'r+')
     writeTweetVoteCount.write('0')
-    
     while isfile(tweet_file % sequence):
         sequence = int(sequence or "1") + 1
     tweet_file = tweet_file % sequence
@@ -137,7 +135,6 @@ def propose_tweet(bot, trigger):
     initialize_tweet.close()
     new_tweet = open(tweet_file, 'r+')
     new_tweet.write(str(trigger.group(2)))
-    
     while isfile(tweetPop % sequence):
         sequence = int(sequence or "1") + 1
     tweetPop = tweetPop % sequence
@@ -145,7 +142,13 @@ def propose_tweet(bot, trigger):
     initWriteTweetPop.close()
     writeTweetPop = open(tweetPop, 'r+')
     writeTweetPop.write(str(userListOut))
-    
+    while isfile(tweetLog % sequence):
+        sequence = int(sequence or "1") + 1
+    tweetLog = tweetLog % sequence
+    initWriteTweetLog = open(tweetLog, 'w')
+    initWriteTweetLog.close()
+    writeTweetLog = open(tweetLog, 'r+')
+    writeTweetLog.write('Tweet proposed by ' + userName)
     bot.reply('Your tweet has been logged. Every hour I will ask for a vote from the room.')
 
 @commands('votetweet')
@@ -160,29 +163,26 @@ def vote_on_tweet(bot, trigger):
     voteLog = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.log'
     votePopFile = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.pop'
     voteCount = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.cnt'
-    # breaks tweet file up into three variables
-    with open(voteCount, 'r+') as voting:
-        rawVoteCnt = [line.rstrip('\n') for line in voting]
-        for line in rawVoteCnt:
-            currentCount = int(line)
-            currentCount += 1
-            voting.write(str(currentCount))
-            
+    # the following section needs repair
+        #  it is supposed to check whether the nick already appears
+        # if it is already appears, it is supposed to prevent the vote
+    with open(voteLog, 'a+') as logVote:
+        voterLog = logVote.read()
+        if voterLog.find(userName) != -1:
+            bot.reply('You have already voted or you proposed this fucking tweet, you cheat!')
+        else:
+            logVote.write('\n' + userName)
+            with open(voteCount, 'r+') as voting:
+                rawVoteCnt = [line.rstrip('\n') for line in voting]
+                for line in rawVoteCnt:
+                    currentCount = int(line)
+                    currentCount += 1
+                    voting.write(str(currentCount))
     with open(selectedTweet, 'r+') as f:
         rawTweetCnts = [line.rstrip('\n') for line in f]
         for line in rawTweetCnts:
             tweetText = line
-    #adds 1 to line 0, which is the vote count
-        # This is just another way of saying 2% of 50 is___
     newVoteCount = str(currentCount)
-# 
-# So, set up the proportion as example #1:
-# 
-# 
-# is/50 = 2/100
-    #adds username to line 3, which is the voter registration line
-    with open(voteLog, 'a') as f2:
-            f2.write(userName)
     #checks vote count against userCount
     with open(votePopFile) as f3:
         votePop = f3.readline()
@@ -197,13 +197,13 @@ def vote_on_tweet(bot, trigger):
         bot.reply('Your vote has allowed ' + str(tweetNumber) + '-- "' + str(tweetText) + '" --' + 'to be posted at http://twitter.com/realWoodcoin')
         api.PostUpdate(tweetText)
         bot.say('To check latest tweet, use .toptweet')
-        logdate = datetime.date.today()
-        dt = datetime.strptime()
-        lognow = dt.strftime("%H%M%S")
-        
-        shutil.move(selectedTweet, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.txt')
-        shutil.move(voteLog, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.log')
-        shutil.move(votePopFile, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.pop')
-        shutil.move(voteCount, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.cnt')
+        logdate = str(datetime.date.today().strftime("%j"))
+        lognow = str(datetime.datetime.now().strftime("%H%M"))
+        if not os.path.exists('/var/www/py/tweets/archived/' + logdate):
+            os.mkdir('/var/www/py/tweets/archived/' + logdate)
+        shutil.move(selectedTweet, '/var/www/py/tweets/archived/' + logdate + '/' + tweetNumber + '-' + lognow + '.txt')
+        shutil.move(voteLog, '/var/www/py/tweets/archived/' + logdate + '/' + tweetNumber + '-' + lognow + '.log')
+        shutil.move(votePopFile, '/var/www/py/tweets/archived/' + logdate + '/' + tweetNumber + '-' + lognow + '.pop')
+        shutil.move(voteCount, '/var/www/py/tweets/archived/' + logdate + '/' + tweetNumber + '-' + lognow + '.cnt')
 
 
