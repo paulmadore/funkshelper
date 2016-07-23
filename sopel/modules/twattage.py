@@ -46,10 +46,24 @@ def twitter_info(bot, trigger):
             twits.write(tweet.text)
             twits.close()
     twitsy = open('/var/www/py/tweets.txt', 'r').readlines()[0]
+    
 
     bot.say('Official Woodcoin Twitter page is http://twitter.com/realWoodcoin and our most recent tweet is:')
     bot.say('        ' + twitsy)
     bot.say('Say .tweetpropose to propose our next tweet and allow other members of the room to vote on it.')
+    
+    
+@commands('tweethelp', 'twitterhelp')
+@rule('$nickname tweethelp')
+def twitter_help(bot, trigger):
+    """"Private messages twattage.py help information to user"""
+    bot.say('Sending you a list of Twitter-related commands, ' + trigger.nick)
+    bot.say('Official Woodcoin Twitter page is http://twitter.com/realWoodcoin', trigger.nick)
+    bot.say('Funkshelper Twitter commands are:', trigger.nick)
+    bot.say('.twitter - provides feed info / latest tweet', trigger.nick)
+    bot.say('.toptweet - provides latest tweet', trigger.nick)
+    bot.say('.tweetpropose, .proposetweet - logs a user proposal of a tweet for voting', trigger.nick)
+    bot.say('.tweetvote <#> - casts vote on chosen tweet to support', trigger.nick)
 
 @interval(2700)
 def call_tweet_vote(bot):
