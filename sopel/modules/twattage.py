@@ -6,6 +6,7 @@
 # .tweetpost - if member gets majority of room to approve, tweet can be posted
 import re
 import readline
+import datetime
 import os
 from os import path
 from os.path import isfile
@@ -116,14 +117,35 @@ def propose_tweet(bot, trigger):
     userList = bot.users
     userListPreOut = len(userList)
     userListOut = int(userListPreOut) - 2
+    
     tweet_file = "/var/www/py/tweets/tweet%s.txt"
+    tweetPop = "/var/www/py/tweets/tweet%s.pop"
+    tweetVoteCount = "/var/www/py/tweets/tweet%s.cnt"
+       
+    while isfile(tweetVoteCount % sequence):
+        sequence = int(sequence or "1") + 1
+    tweetVoteCount = tweetVoteCount % sequence
+    initWriteTweetVoteCount = open(tweetVoteCount, 'w')
+    initWriteTweetVoteCount.close()
+    writeTweetVoteCount = open(tweetVoteCount, 'r+')
+    writeTweetVoteCount.write('0')
+    
     while isfile(tweet_file % sequence):
         sequence = int(sequence or "1") + 1
     tweet_file = tweet_file % sequence
     initialize_tweet = open(tweet_file, 'w')
     initialize_tweet.close()
     new_tweet = open(tweet_file, 'r+')
-    new_tweet.write('0' + '\n' + str(trigger.group(2)) + '\n' + str(userListOut))
+    new_tweet.write(str(trigger.group(2)))
+    
+    while isfile(tweetPop % sequence):
+        sequence = int(sequence or "1") + 1
+    tweetPop = tweetPop % sequence
+    initWriteTweetPop = open(tweetPop, 'w')
+    initWriteTweetPop.close()
+    writeTweetPop = open(tweetPop, 'r+')
+    writeTweetPop.write(str(userListOut))
+    
     bot.reply('Your tweet has been logged. Every hour I will ask for a vote from the room.')
 
 @commands('votetweet')
@@ -136,35 +158,52 @@ def vote_on_tweet(bot, trigger):
      #opens tweet#
     selectedTweet = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.txt'
     voteLog = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.log'
+    votePopFile = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.pop'
+    voteCount = '/var/www/py/tweets/tweet' + str(tweetNumber) + '.cnt'
     # breaks tweet file up into three variables
+    with open(voteCount, 'r+') as voting:
+        rawVoteCnt = [line.rstrip('\n') for line in voting]
+        for line in rawVoteCnt:
+            currentCount = int(line)
+            currentCount += 1
+            voting.write(str(currentCount))
+            
     with open(selectedTweet, 'r+') as f:
         rawTweetCnts = [line.rstrip('\n') for line in f]
-        for line in rawTweetCnts[:1]:
-            currentCount = int(line) + 1
-            newVoteCount = str(currentCount)
-            f.write(newVoteCount)
-        for line in rawTweetCnts[:2]:
+        for line in rawTweetCnts:
             tweetText = line
-        for line in rawTweetCnts[:3]:
-            votePop = line
     #adds 1 to line 0, which is the vote count
-        
+        # This is just another way of saying 2% of 50 is___
+    newVoteCount = str(currentCount)
+# 
+# So, set up the proportion as example #1:
+# 
+# 
+# is/50 = 2/100
     #adds username to line 3, which is the voter registration line
     with open(voteLog, 'a') as f2:
             f2.write(userName)
     #checks vote count against userCount
-    neededVotes = int(votePop) / 100 * 80
-    if neededVotes < int(newVoteCount):
-        approved_tweet = True
-    else:
-        approved_tweet = False
+    with open(votePopFile) as f3:
+        votePop = f3.readline()
+        neededVotes = float(votePop) * 0.8
+        if neededVotes < int(currentCount):
+            approved_tweet = True
+        else:
+            approved_tweet = False
     if approved_tweet != True:
-        bot.reply('Your vote has been cast for ' + str(tweetNumber) + '. Tweet currently needs ' + str(neededVotes) + ' votes and has ' + str(newVoteCount) + ' votes.')
+        bot.reply('Your vote has been cast for tweet #' + str(tweetNumber) + '. Tweet currently has ' + str(newVoteCount) + ' votes.')
     elif approved_tweet is True:
         bot.reply('Your vote has allowed ' + str(tweetNumber) + '-- "' + str(tweetText) + '" --' + 'to be posted at http://twitter.com/realWoodcoin')
         api.PostUpdate(tweetText)
         bot.say('To check latest tweet, use .toptweet')
-        shutil.move(selectedTweet, '/var/www/py/tweets/archived' + selectedTweet)
-        shutil.move(voteLog, '/var/www/py/tweets/archived' + voteLog)
+        logdate = datetime.date.today()
+        dt = datetime.strptime()
+        lognow = dt.strftime("%H%M%S")
+        
+        shutil.move(selectedTweet, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.txt')
+        shutil.move(voteLog, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.log')
+        shutil.move(votePopFile, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.pop')
+        shutil.move(voteCount, '/var/www/py/tweets/archived/' + str(logdate) + '/' + tweetNumber + str(lognow) + '.cnt')
 
 
