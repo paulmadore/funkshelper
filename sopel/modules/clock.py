@@ -4,6 +4,8 @@
 # Licensed under the Eiffel Forum License 2.
 from __future__ import unicode_literals, absolute_import, print_function, division
 
+import datetime
+import time
 try:
     import pytz
 except ImportError:
@@ -275,3 +277,14 @@ def get_channel_format(bot, trigger):
         bot.say('%s\'s time format: %s' % (channel, tformat))
     else:
         bot.say('%s has no preferred time format' % channel)
+        
+@commands('epoch', 'unixtime')
+@example('.epoch')
+def get_current_epoch(bot, trigger):
+    """
+    Prints current Epoch time.
+    """
+    unixtime = int(time.time())
+    log_epoch = unixtime - 1413813724
+    log_epoch_days = log_epoch / 86400
+    bot.say(str(log_epoch) + ' seconds (' + str(log_epoch_days) + ' days) since Woodcoin block 0 :: http://explorer.woodcoin.org/b/1R8cJtQuz')

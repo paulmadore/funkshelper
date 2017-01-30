@@ -65,24 +65,6 @@ def twitter_help(bot, trigger):
     bot.say('.tweetpropose, .proposetweet - logs a user proposal of a tweet for voting', trigger.nick)
     bot.say('.tweetvote <#> - casts vote on chosen tweet to support', trigger.nick)
 
-@interval(2700)
-def call_tweet_vote(bot):
-    """Lists proposed tweets every 45 minutes."""
-    if "#woodcoin" in bot.channels:
-        bot.msg('#woodcoin', 'The following tweets are currently being considered for inclusion in our Twitter timeline. Each Tweet must have a majority of the room\'s approval before being posted.')
-        tweetpath = '/var/www/py/tweets/'
-        text = glob.glob(os.path.join(tweetpath, '*.txt'))
-        for file in text:
-            with open(file) as f:
-                rawTweetCnts = [line.rstrip('\n') for line in f]
-                for line in rawTweetCnts[:2]:
-                    tweetCnts = line
-            tmp_filename = file.replace("/var/www/py/tweets/", "")
-            filenameish = tmp_filename.replace(".txt", "")
-            bot.msg('#woodcoin', filenameish + ' : ' + tweetCnts)
-        bot.msg('#woodcoin', 'To vote for a tweet, say .voteTweet <tweet#>. To vote against it, do nothing.')
-
-        
 @require_privilege(OP, 'You are not a channel operator.')
 @commands('call_tweet_vote')
 def call_tweet_vote_manual(bot, trigger):

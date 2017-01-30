@@ -59,16 +59,16 @@ def dollar(bot, trigger):
     usd = "{:.8f}".format(output)
     return bot.reply('The current US dollar valaution of a LOG is $' + usd)
 
-@commands('bitcoin')
-@rule('$nickname bitcoin')
-def bitcoinPrice(bot, trigger):
-    raw = requests.get('https://api.bitcoinaverage.com/ticker/global/USD')
+@commands('woodcoin')
+@rule('$nickname woodcoin')
+def woodcoinPrice(bot, trigger):
+    raw = requests.get('https://api.woodcoinaverage.com/ticker/global/USD')
     raw_text = raw.text
     raw_json = json.loads(raw_text)
     output = raw_json['last']
     priceBitcoin = str(output)
     nickName = ['mothafuckah', 'you lazy bitch', 'love, fucking web search', 'you dirty cunt', 'but why does that matter?', 'tweedle-twat', 'traitor', 'anvil-dropping slut', 'you fucking tunnel-worm', 'worthless cave gherkin', 'm\'lady']
-    return bot.reply('Current price of them bitcoins is $' + priceBitcoin + ' each, ' + random.choice(nickName) + '.')
+    return bot.reply('Current price of them woodcoins is $' + priceBitcoin + ' each, ' + random.choice(nickName) + '.')
 
 @commands('fiat')
 @rule('$nickname fiat')
